@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.timeismoney.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Que d\u00EDa empez\u00F3 tu jornada?"
+        android:gravity="start"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/getStartDate_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint="DD/MM/AAAA"
+                />
+
+            <Button
+                android:id="@+id/setToday_startDate_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Hoy"
+                android:onClick="setToday_StartDate"/>
+
+            <Button
+                android:id="@+id/setYesterday_startDate_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Ayer"
+                android:onClick="setYesterday_StartDate"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/askStartTime_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿A qu\u00E9 hora empezaste?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/getStartHour_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="HORAS"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text=":"
+                android:gravity="center_horizontal"/>
+
+            <EditText
+                android:id="@+id/getStartMinute_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="MINUTO"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Que d\u00EDa termin\u00F3 tu jornada?"
+            android:gravity="start"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/getEndDate_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:hint="DD/MM/AAAA"
+                />
+
+            <Button
+                android:id="@+id/setToday_EndDate_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Hoy"
+                android:onClick="setToday_EndDate"/>
+
+            <Button
+                android:id="@+id/setYesterday_EndDate_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Ayer"
+                android:onClick="setYesterday_EndDate"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/askEndTime_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿A qu\u00E9 hora terminaste?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/getEndHour_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text=":"
+                android:gravity="center_horizontal"/>
+
+            <EditText
+                android:id="@+id/getEndMinute_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/askMoneyPerHour_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cu\u00E1nto cobras por hora?" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        <EditText
+            android:id="@+id/getSalary_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="P. ej.: 5.50"/>
+
+            <TextView
+                android:id="@+id/euroSymbol_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="€"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/calculateSalary_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Calcular" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Guardar"
+                android:onClick="cosa"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/showResulta_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>
